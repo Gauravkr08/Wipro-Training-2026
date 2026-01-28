@@ -3,7 +3,6 @@ import json
 import csv
 import time
 
-# ===================== DESCRIPTORS =====================
 class MarksDescriptor:
     def __get__(self, instance, owner):
         return instance._marks
@@ -23,7 +22,6 @@ class SalaryDescriptor:
         instance._salary = value
 
 
-# ===================== DECORATORS =====================
 def admin_only(func):
     def wrapper(*args, **kwargs):
         is_admin = False
@@ -52,7 +50,6 @@ def time_execution(func):
     return wrapper
 
 
-# ===================== ABSTRACT BASE CLASS =====================
 class Person(ABC):
     def __init__(self, pid, name, department):
         self.pid = pid
@@ -67,7 +64,6 @@ class Person(ABC):
         print(f"Cleaning up resources for {self.name}")
 
 
-# ===================== STUDENT CLASS =====================
 class Student(Person):
     marks = MarksDescriptor()
 
@@ -94,7 +90,6 @@ class Student(Person):
         return sum(self.marks) > sum(other.marks)
 
 
-# ===================== FACULTY CLASS =====================
 class Faculty(Person):
     salary = SalaryDescriptor()
 
@@ -110,7 +105,6 @@ class Faculty(Person):
         print(f"Department: {self.department}")
 
 
-# ===================== COURSE CLASS =====================
 class Course:
     def __init__(self, code, name, credits, faculty):
         self.code = code
@@ -121,14 +115,11 @@ class Course:
     def __add__(self, other):
         return self.credits + other.credits
 
-
-# ===================== DEPARTMENT (UTILITY CLASS) =====================
 class Department:
     def __init__(self, name):
         self.name = name
 
 
-# ===================== ITERATOR =====================
 class CourseIterator:
     def __init__(self, courses):
         self.courses = courses
@@ -145,14 +136,12 @@ class CourseIterator:
         raise StopIteration
 
 
-# ===================== GENERATOR =====================
 def student_generator(students):
     print("Fetching Student Records...")
     for s in students:
         yield f"{s.pid} - {s.name}"
 
 
-# ===================== FILE HANDLING =====================
 def save_students_json(students):
     data = []
     for s in students:
@@ -178,7 +167,6 @@ def generate_csv_report(students):
     print("CSV Report Generated: students_report.csv")
 
 
-# ===================== MAIN PROGRAM =====================
 students = []
 faculty_list = []
 courses = []
