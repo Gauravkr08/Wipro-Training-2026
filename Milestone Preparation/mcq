@@ -1,0 +1,286 @@
+1. What does range(1, 5) return?
+
+A. [1,2,3,4,5]
+B. [1,2,3,4] ------- correct
+C. (1,2,3,4)
+D. 1 to 5
+
+2. Which function gives both index and value while looping?
+
+A. range
+B. iter
+C. enumerate ------- correct
+D. map
+
+3. What does iter() do?
+
+A. Converts list to tuple
+B. Returns an iterator object ------- correct
+C. Stops iteration
+D. Sorts data
+
+4. Which function applies a function to all items in an iterable?
+
+A. filter
+B. reduce
+C. map ------- correct
+D. iter
+
+5. Which function filters elements based on a condition?
+
+A. map
+B. filter ------- correct
+C. reduce
+D. lambda
+
+6. reduce() belongs to which module?
+
+A. sys
+B. math
+C. functools ------- correct
+D. operator
+
+7. What is a lambda function?
+
+A. Named function
+B. Recursive function
+C. Anonymous function ------- correct
+D. Generator function
+
+17. Decorators are used to:
+
+A. Modify class
+B. Modify function behavior ------- correct
+C. Delete functions
+D. Rename variables
+
+18. Which symbol is used for decorators?
+
+A. #
+B. $
+C. @ ------- correct
+D. &
+
+19. A decorator returns:
+
+A. Value
+B. Function ------- correct
+C. Integer
+D. String
+
+20. Which keyword defines a function?
+
+A. func
+B. def ------- correct
+C. function
+D. lambda
+
+21. A Python file is called:
+
+A. Package
+B. Library
+C. Module ------- correct
+D. Framework
+
+22. Which mode opens a file for reading?
+
+A. w
+B. a
+C. r ------- correct
+D. rw
+
+23. Which keyword is used to handle exceptions?
+
+A. catch
+B. error
+C. except ------- correct
+D. handle
+
+24. Code inside finally block:
+
+A. Runs only on error
+B. Never runs
+C. Always runs ------- correct
+D. Runs sometimes
+
+25. Which exception occurs when dividing by zero?
+
+A. ValueError
+B. ZeroDivisionError ------- correct
+C. TypeError
+D. IndexError
+
+26. Paramiko is used for:
+
+A. FTP
+B. SSH ------- correct
+C. HTTP
+D. SMTP
+
+27. Which class is used to create SSH connection?
+
+A. SSHClient ------- correct
+B. Transport
+C. Channel
+D. Server
+
+28. Paramiko works on which protocol?
+
+A. TCP
+B. UDP
+C. SSH ------- correct
+D. FTP
+
+29. Breakpoints are used to:
+
+A. Stop program permanently
+B. Pause execution ------- correct
+C. Compile code
+D. Delete code
+
+30. Debugging helps to find:
+
+A. Syntax
+B. Logic errors
+C. Runtime errors
+D. All of the above ------- correct
+
+31. Step Over executes:
+
+A. Current line only
+B. Entire program
+C. Next function call
+D. Current line without entering function ------- correct
+
+32. JSON stands for:
+
+A. JavaScript Object Notation ------- correct
+B. Java Source Object Name
+C. Java Serialized Object Network
+D. None
+
+33. Which module handles JSON?
+
+A. json ------- correct
+B. csv
+C. xml
+D. pickle
+
+34. CSV file uses which delimiter by default?
+
+A. ;
+B. |
+C. , ------- correct
+D. :
+
+35. XML parsing can be done using:
+
+A. ElementTree
+B. BeautifulSoup
+C. lxml
+D. All of the above ------- correct
+
+36. subprocess module is used to:
+
+A. Create threads
+B. Run external commands ------- correct
+C. Debug code
+D. Handle files
+
+37. Which function runs a command and waits?
+
+A. run() ------- correct
+B. Popen()
+C. call()
+D. exec()
+
+38. Threading allows:
+
+A. Single task
+B. Multiple processes
+C. Concurrent execution ------- correct
+D. Sequential execution
+
+39. Which module supports threading?
+
+A. thread
+B. threading ------- correct
+C. multiprocessing
+D. concurrent
+
+40. GIL stands for:
+
+A. Global Interpreter Lock ------- correct
+B. General Input Lock
+C. Global Index Loop
+D. Graphical Interface Layer
+
+41. Virtual environment is used to:
+
+A. Speed up code
+B. Isolate dependencies ------- correct
+C. Compile Python
+D. Debug programs
+
+42. Which command creates virtual environment?
+
+A. python -m venv env ------- correct
+B. pip install venv
+C. python env
+D. venv install
+
+43. Activating venv on Windows:
+
+A. source env/bin/activate
+B. env\Scripts\activate ------- correct
+C. activate env
+D. start env
+
+44. Which keyword stops a loop?
+
+A. stop
+B. end
+C. break ------- correct
+D. exit
+
+45. Which is immutable?
+
+A. List
+B. Set
+C. Dictionary
+D. Tuple ------- correct
+
+46. What does with statement ensure?
+
+A. Loop control
+B. File closure ------- correct
+C. Error handling
+D. Debugging
+
+47. Which function converts string to integer?
+
+A. str()
+B. int() ------- correct
+C. float()
+D. eval()
+
+48. Which keyword is used to import module?
+
+A. include
+B. require
+C. import ------- correct
+D. load
+
+49. What is output of len("Python")?
+
+A. 5
+B. 6 ------- correct
+C. 7
+D. Error
+
+50. Which is a correct generator expression?
+
+A. [xx for x in range(5)]
+B. {xx for x in range(5)}
+C. (x*x for x in range(5)) ------- correct
+D. x*x for x in range(5)
