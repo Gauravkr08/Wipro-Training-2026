@@ -30,7 +30,7 @@ Register TutorialsNinja User
     ${email}=        Set Variable    ${firstname}.${lastname}.${timestamp}@mail.com
 
     Input Text    id=input-firstname    ${firstname}
-    Input Text    id=input-lastname     ${lastname}
+    Input Text    id=input-lastname     ${lastname}de
     Input Text    id=input-email        ${email}
     Input Text    id=input-telephone    ${telephone}
     Input Text    id=input-password     ${password}
