@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-02T19:07:14.756661" rpa="false" schemaversion="5">
+<suite id="s1" name="Q2" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-14\Assignment day14\Q2.robot">
+<test id="s1-t1" name="Form Interaction Using SeleniumLibrary" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:15.196157" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-02T19:07:15.195842" elapsed="7.861743"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.058122" elapsed="0.153091"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:23.212810" level="INFO">Typing text 'Abhi nay' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>Abhi nay</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.211944" elapsed="0.124452"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:23.337775" level="INFO">Clicking element 'xpath=//input[@value='radio1']'.</msg>
+<arg>xpath=//input[@value='radio1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.337209" elapsed="0.095086"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:23.433459" level="INFO">Clicking element 'xpath=//input[@id='checkBoxOption1']'.</msg>
+<arg>xpath=//input[@id='checkBoxOption1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.432992" elapsed="0.073913"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:23.507755" level="INFO">Selecting options from selection list 'id=dropdown-class-example' by label Option1.</msg>
+<arg>id=dropdown-class-example</arg>
+<arg>Option1</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.507411" elapsed="0.105183"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:23.637604" level="INFO">${text} = Abhi nay</msg>
+<var>${text}</var>
+<arg>id=name</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.613218" elapsed="0.024429"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T19:07:23.639018" level="INFO">Text box value entered successfully</msg>
+<arg>Text box value entered successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.638839" elapsed="0.000225"/>
+</kw>
+<arg>'${text}' != ''</arg>
+<arg>Log</arg>
+<arg>Text box value entered successfully</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.638166" elapsed="0.000952"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-02T19:07:25.640497" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-02T19:07:23.639508" elapsed="2.001209"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:07:25.649660" level="INFO">${title} = Practice Page</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-02-02T19:07:25.641457" elapsed="0.008299"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Practice Page</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-02T19:07:25.650554" elapsed="0.000569"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-02T19:07:25.651618" elapsed="2.196899"/>
+</kw>
+<status status="PASS" start="2026-02-02T19:07:15.194653" elapsed="12.654519"/>
+</test>
+<status status="PASS" start="2026-02-02T19:07:14.758303" elapsed="13.092263"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Q2" id="s1" pass="1" fail="0" skip="0">Q2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

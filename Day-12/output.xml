@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-05T12:26:49.156138" rpa="false" schemaversion="5">
+<suite id="s1" name="FW" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-12\Assignment Day12\FW">
+<suite id="s1-s1" name="Q1" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-12\Assignment Day12\FW\Q1.robot">
+<test id="s1-s1-t1" name="Test Case 1 - Logging Messages" line="10">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.251136" level="INFO">Starting Test Case 1</msg>
+<arg>Starting Test Case 1</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.250101" elapsed="0.001148"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hello ${NAME}, welcome to ${COURSE}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.252771" elapsed="0.003434"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.266325" level="INFO">This message goes to the log file</msg>
+<arg>This message goes to the log file</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.264932" elapsed="0.001650"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test Case 1 Completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.268997" elapsed="0.001141"/>
+</kw>
+<status status="PASS" start="2026-02-05T12:26:49.248594" elapsed="0.021992"/>
+</test>
+<test id="s1-s1-t2" name="Test Case 2 - Using Variables" line="16">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Demonstrating scalar and list variables</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.272157" elapsed="0.000839"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.274008" level="INFO">Name is: Gaurav</msg>
+<arg>Name is: ${NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.273456" elapsed="0.000632"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.275180" level="INFO">Course is: Robot Framework</msg>
+<arg>Course is: ${COURSE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.274597" elapsed="0.000664"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Numbers list: @{NUMBERS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.275948" elapsed="0.000970"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.279233" level="INFO">${sum} = 100</msg>
+<var>${sum}</var>
+<arg>sum(int(x) for x in ${NUMBERS})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.277682" elapsed="0.001612"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Sum of numbers is ${sum}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.279835" elapsed="0.000984"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.281582" level="INFO">Test Case 2 Completed Successfully</msg>
+<arg>Test Case 2 Completed Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.281196" elapsed="0.000456"/>
+</kw>
+<status status="PASS" start="2026-02-05T12:26:49.271383" elapsed="0.010873"/>
+</test>
+<status status="PASS" start="2026-02-05T12:26:49.244302" elapsed="0.039401"/>
+</suite>
+<suite id="s1-s2" name="Q2" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-12\Assignment Day12\FW\Q2.robot">
+<test id="s1-s2-t1" name="Verify Environment Setup" line="6">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Starting environment verification...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.869400" elapsed="0.000708"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Python is available in the system</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.870852" elapsed="0.000654"/>
+</kw>
+<kw name="Get Variable Value" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.873442" level="INFO">${rf_version} = None</msg>
+<var>${rf_version}</var>
+<arg>${ROBOT_VERSION}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.871923" elapsed="0.001572"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.874622" level="INFO">Robot Framework Version: None</msg>
+<arg>Robot Framework Version: ${rf_version}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.873956" elapsed="0.000764"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Robot Framework Version: ${rf_version}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.875235" elapsed="0.001055"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-05T12:26:49.877565" level="INFO">SeleniumLibrary imported successfully</msg>
+<arg>SeleniumLibrary imported successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.876898" elapsed="0.000838"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>SeleniumLibrary is available</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.878270" elapsed="0.000751"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Environment verification completed successfully</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T12:26:49.879676" elapsed="0.000987"/>
+</kw>
+<status status="PASS" start="2026-02-05T12:26:49.868146" elapsed="0.013123"/>
+</test>
+<status status="PASS" start="2026-02-05T12:26:49.285234" elapsed="0.597273"/>
+</suite>
+<status status="PASS" start="2026-02-05T12:26:49.159188" elapsed="0.725681"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="FW" id="s1" pass="3" fail="0" skip="0">FW</stat>
+<stat name="Q1" id="s1-s1" pass="2" fail="0" skip="0">FW.Q1</stat>
+<stat name="Q2" id="s1-s2" pass="1" fail="0" skip="0">FW.Q2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

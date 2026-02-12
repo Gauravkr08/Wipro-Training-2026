@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-01T21:23:46.688706" rpa="false" schemaversion="5">
+<suite id="s1" name="Q2" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-13\Assignment Day13\q2.robot">
+<kw name="Open Browser To Site" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-01T21:23:46.891083" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-01T21:23:46.890841" elapsed="3.326296"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-01T21:23:50.217381" elapsed="0.026674"/>
+</kw>
+<status status="PASS" start="2026-02-01T21:23:46.890225" elapsed="3.354055"/>
+</kw>
+<test id="s1-t1" name="Login With Multiple Users" line="30">
+<status status="FAIL" start="2026-02-01T21:23:50.244410" elapsed="0.000846">Test cannot be empty.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-01T21:23:50.246300" elapsed="2.137442"/>
+</kw>
+<status status="FAIL" start="2026-02-01T21:23:46.690366" elapsed="5.693528"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Q2" id="s1" pass="0" fail="1" skip="0">Q2</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-01T21:23:46.888406" level="ERROR">Error in file 'C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-13\Assignment Day13\q2.robot' on line 3: Importing library 'DataDriver' failed: ModuleNotFoundError: No module named 'DataDriver'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Scripts\robot.exe
+  C:\Program Files\Python314\python314.zip
+  C:\Program Files\Python314\DLLs
+  C:\Program Files\Python314\Lib
+  C:\Program Files\Python314
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages\win32
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages\win32\lib
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-04T17:24:07.117852" rpa="false" schemaversion="5">
+<suite id="s1" name="TC TutorialsNinja Register" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-13\Class work Day13\TC_TutorialsNinja_Register.robot">
+<test id="s1-t1" name="TC_TutorialsNinja_Register" line="14">
+<status status="FAIL" start="2026-02-04T17:24:07.811655" elapsed="0.000954">Test cannot be empty.</status>
+</test>
+<status status="FAIL" start="2026-02-04T17:24:07.120483" elapsed="0.693369"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC TutorialsNinja Register" id="s1" pass="0" fail="1" skip="0">TC TutorialsNinja Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-04T17:24:07.805770" level="ERROR">Error in file 'C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Day-13\Class work Day13\TC_TutorialsNinja_Register.robot' on line 3: Importing library 'DataDriver' failed: ModuleNotFoundError: No module named 'DataDriver'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Scripts\robot.exe
+  C:\Program Files\Python314\python314.zip
+  C:\Program Files\Python314\DLLs
+  C:\Program Files\Python314\Lib
+  C:\Program Files\Python314
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages\win32
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages\win32\lib
+  C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\venv456\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

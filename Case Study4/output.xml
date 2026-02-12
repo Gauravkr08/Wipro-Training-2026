@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.9.13 on win32)" generated="2026-02-03T18:25:32.445699" rpa="false" schemaversion="5">
+<suite id="s1" name="Patient Registration" source="C:\Users\KIIT\OneDrive\Desktop\wipro class question\Case study 4(03.02.2026)\patient_registration.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-02-03T18:25:32.784430" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/KIIT/OneDrive/Desktop/wipro class question/Case study 4(03.02.2026)/index.html'.</msg>
+<arg>file:///C:/Users/KIIT/OneDrive/Desktop/wipro class question/Case study 4(03.02.2026)/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-03T18:25:32.784430" elapsed="1.563373"/>
+</kw>
+<test id="s1-t1" name="Register Single Patient" line="23">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-03T18:25:34.355857" elapsed="0.065629"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:34.423507" level="INFO">Typing text 'John' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${NAME1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:34.422513" elapsed="0.318545"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:34.755542" level="INFO">Typing text '30' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>${AGE1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:34.748808" elapsed="0.204822"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:34.955978" level="INFO">Selecting options from selection list 'id=gender' by value Male.</msg>
+<arg>id=gender</arg>
+<arg>${GENDER1}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-03T18:25:34.954614" elapsed="0.089776"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:35.045415" level="INFO">Typing text '9999999999' into text field 'id=contact'.</msg>
+<arg>id=contact</arg>
+<arg>${CONTACT1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:35.044390" elapsed="0.118592"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:35.164416" level="INFO">Typing text 'Fever' into text field 'id=disease'.</msg>
+<arg>id=disease</arg>
+<arg>${DISEASE1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:35.162982" elapsed="0.112432"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:35.276415" level="INFO">Selecting options from selection list 'id=doctor' by value Dr. Smith.</msg>
+<arg>id=doctor</arg>
+<arg>${DOCTOR1}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-03T18:25:35.275414" elapsed="0.058761"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:35.335185" level="INFO">Clicking button 'id=submitBtn'.</msg>
+<arg>id=submitBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:35.335185" elapsed="0.116697"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-03T18:25:36.454844" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-03T18:25:35.452890" elapsed="1.001954"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-02-03T18:25:36.562326" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.455364" elapsed="0.106962"/>
+</kw>
+<status status="PASS" start="2026-02-03T18:25:34.350869" elapsed="2.211457"/>
+</test>
+<test id="s1-t2" name="Register Multiple Patients" line="34">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.564325" elapsed="0.020507"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=name</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.584832" elapsed="0.044369"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:36.630311" level="INFO">Typing text 'Alice' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${NAME2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.630311" elapsed="0.131431"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=age</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.763085" elapsed="0.042679"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:36.806842" level="INFO">Typing text '28' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>${AGE2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.805764" elapsed="0.093889"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:36.901605" level="INFO">Selecting options from selection list 'id=gender' by value Female.</msg>
+<arg>id=gender</arg>
+<arg>${GENDER2}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.901096" elapsed="0.092020"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=contact</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:36.994199" elapsed="0.040470"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:37.036083" level="INFO">Typing text '8888888888' into text field 'id=contact'.</msg>
+<arg>id=contact</arg>
+<arg>${CONTACT2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:37.034669" elapsed="0.109068"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=disease</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:37.143737" elapsed="0.041188"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:37.186089" level="INFO">Typing text 'Cold' into text field 'id=disease'.</msg>
+<arg>id=disease</arg>
+<arg>${DISEASE2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:37.184925" elapsed="0.102779"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:37.289148" level="INFO">Selecting options from selection list 'id=doctor' by value Dr. Brown.</msg>
+<arg>id=doctor</arg>
+<arg>${DOCTOR2}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-03T18:25:37.289148" elapsed="0.163946"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-03T18:25:37.455081" level="INFO">Clicking button 'id=submitBtn'.</msg>
+<arg>id=submitBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T18:25:37.454086" elapsed="0.148876"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-03T18:25:38.611953" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-03T18:25:37.606545" elapsed="1.005408"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-02-03T18:25:38.694980" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-03T18:25:38.611953" elapsed="0.083027"/>
+</kw>
+<status status="PASS" start="2026-02-03T18:25:36.563331" elapsed="2.132636"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-03T18:25:38.696983" elapsed="2.258375"/>
+</kw>
+<status status="PASS" start="2026-02-03T18:25:32.447873" elapsed="8.507485"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Patient Registration" id="s1" pass="2" fail="0" skip="0">Patient Registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
