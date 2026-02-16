@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-16T23:30:36.086027" rpa="false" schemaversion="5">
+<suite id="s1" name="All Tests" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\FoodieApp\tests\robot\all_tests.robot">
+<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
+<msg time="2026-02-16T23:30:36.376847" level="INFO">Creating Session using : alias=foodie, url=http://localhost:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>foodie</arg>
+<arg>http://localhost:5000</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-02-16T23:30:36.375960" elapsed="0.001213"/>
+</kw>
+<test id="s1-t1" name="Add Restaurant" line="9">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:30:36.379394" level="INFO">${body} = {'name': 'Food Hub', 'category': 'Fast Food', 'location': 'City Center', 'images': '[]', 'contact': '1234567890'}</msg>
+<var>${body}</var>
+<arg>name=Food Hub</arg>
+<arg>category=Fast Food</arg>
+<arg>location=City Center</arg>
+<arg>images=[]</arg>
+<arg>contact=1234567890</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:30:36.378412" elapsed="0.001042"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:40.454991" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants</msg>
+<msg time="2026-02-16T23:30:44.738527" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants</msg>
+<msg time="2026-02-16T23:30:49.192069" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants</msg>
+<msg time="2026-02-16T23:30:53.235404" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/restaurants (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:36.380029" elapsed="16.880173">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/restaurants (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.260764" elapsed="0.000061"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${restaurant_id}</var>
+<arg>${response.json()["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.261464" elapsed="0.000067"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:36.377400" elapsed="16.884674">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/restaurants (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</test>
+<test id="s1-t2" name="Update Restaurant" line="15">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:30:53.264123" level="INFO">${body} = {'name': 'Food Hub Updated'}</msg>
+<var>${body}</var>
+<arg>name=Food Hub Updated</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:30:53.263563" elapsed="0.000600"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.265332" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants/${restaurant_id}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.264555" elapsed="0.000834">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.266172" elapsed="0.000058"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.262991" elapsed="0.003906">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t3" name="Disable Restaurant" line="20">
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.269577" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants/${restaurant_id}/dis</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.268805" elapsed="0.000852">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.270226" elapsed="0.000043"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.267865" elapsed="0.002772">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t4" name="Get Restaurant" line="24">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.272648" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants/${restaurant_id}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.271895" elapsed="0.000853">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.273327" elapsed="0.000053"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.271302" elapsed="0.002547">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t5" name="Add Dish" line="29">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:30:53.276333" level="INFO">${body} = {'name': 'Pizza', 'type': 'Main', 'price': '120', 'available_time': '10:00-22:00', 'image': '""'}</msg>
+<var>${body}</var>
+<arg>name=Pizza</arg>
+<arg>type=Main</arg>
+<arg>price=120</arg>
+<arg>available_time=10:00-22:00</arg>
+<arg>image=""</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:30:53.275636" elapsed="0.000753"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.278571" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants/${restaurant_id}/dishes</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.277266" elapsed="0.001422">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.279359" elapsed="0.000064"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${dish_id}</var>
+<arg>${response.json()["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.279873" elapsed="0.000057"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.274767" elapsed="0.005797">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t6" name="Update Dish" line="35">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:30:53.284555" level="INFO">${body} = {'price': '150'}</msg>
+<var>${body}</var>
+<arg>price=150</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:30:53.283450" elapsed="0.001185"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.286361" level="FAIL">Variable '${dish_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/dishes/${dish_id}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.285515" elapsed="0.000921">Variable '${dish_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.287017" elapsed="0.000050"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.281488" elapsed="0.005982">Variable '${dish_id}' not found.</status>
+</test>
+<test id="s1-t7" name="Toggle Dish" line="40">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:30:53.289627" level="INFO">${body} = {'enabled': 'True'}</msg>
+<var>${body}</var>
+<arg>enabled=True</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:30:53.288922" elapsed="0.000768"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.291263" level="FAIL">Variable '${dish_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/dishes/${dish_id}/status</arg>
+<arg>json=${body}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.290373" elapsed="0.000965">Variable '${dish_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.291935" elapsed="0.000060"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.288225" elapsed="0.004305">Variable '${dish_id}' not found.</status>
+</test>
+<test id="s1-t8" name="Delete Dish" line="45">
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:53.295933" level="FAIL">Variable '${dish_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/dishes/${dish_id}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.294702" elapsed="0.001373">Variable '${dish_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:30:53.296764" elapsed="0.000067"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.293661" elapsed="0.003605">Variable '${dish_id}' not found.</status>
+</test>
+<test id="s1-t9" name="Register User" line="50">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:30:53.301423" level="INFO">${body} = {'name': 'Alice', 'email': 'alice@example.com', 'password': '123'}</msg>
+<var>${body}</var>
+<arg>name=Alice</arg>
+<arg>email=alice@example.com</arg>
+<arg>password=123</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:30:53.300271" elapsed="0.001273"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:30:57.366806" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/users/register</msg>
+<msg time="2026-02-16T23:31:01.664078" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/users/register</msg>
+<msg time="2026-02-16T23:31:06.155906" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/users/register</msg>
+<msg time="2026-02-16T23:31:10.230796" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/users/register (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/users/register</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:30:53.303364" elapsed="16.934668">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/users/register (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:10.238818" elapsed="0.000076"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${user_id}</var>
+<arg>${response.json()["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:10.239666" elapsed="0.000061"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:53.298989" elapsed="16.941296">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/users/register (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</test>
+<test id="s1-t10" name="Search Restaurant" line="56">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:31:10.242608" level="INFO">${params} = {'name': 'Food Hub', 'location': 'City Center', 'dish': 'Pizza', 'rating': ''}</msg>
+<var>${params}</var>
+<arg>name=Food Hub</arg>
+<arg>location=City Center</arg>
+<arg>dish=Pizza</arg>
+<arg>rating=</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T23:31:10.242003" elapsed="0.000645"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:14.290312" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating=</msg>
+<msg time="2026-02-16T23:31:18.582030" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating=</msg>
+<msg time="2026-02-16T23:31:23.040571" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating=</msg>
+<msg time="2026-02-16T23:31:27.122236" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating= (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants/search</arg>
+<arg>params=${params}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:10.243029" elapsed="16.914897">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating= (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.158745" elapsed="0.000074"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:10.241436" elapsed="16.918062">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating= (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</test>
+<test id="s1-t11" name="Place Order" line="62">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:31:27.163319" level="FAIL">Variable '${user_id}' not found.</msg>
+<var>${body}</var>
+<arg>user_id=${user_id}</arg>
+<arg>restaurant_id=${restaurant_id}</arg>
+<arg>dishes=[]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.161660" elapsed="0.001730">Variable '${user_id}' not found.</status>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/orders</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.163965" elapsed="0.000039"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.164343" elapsed="0.000032"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${order_id}</var>
+<arg>${response.json()["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.164697" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.160794" elapsed="0.004310">Variable '${user_id}' not found.</status>
+</test>
+<test id="s1-t12" name="Give Rating" line="68">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T23:31:27.167504" level="FAIL">Variable '${order_id}' not found.</msg>
+<var>${body}</var>
+<arg>order_id=${order_id}</arg>
+<arg>rating=5</arg>
+<arg>comment=Excellent</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.166454" elapsed="0.001109">Variable '${order_id}' not found.</status>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/ratings</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.168148" elapsed="0.000062"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.168930" elapsed="0.000086"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.165957" elapsed="0.003760">Variable '${order_id}' not found.</status>
+</test>
+<test id="s1-t13" name="View Orders User" line="73">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:27.171707" level="FAIL">Variable '${user_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/users/${user_id}/orders</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.170995" elapsed="0.000776">Variable '${user_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.172329" elapsed="0.000045"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.170397" elapsed="0.002372">Variable '${user_id}' not found.</status>
+</test>
+<test id="s1-t14" name="View Orders Restaurant" line="77">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:27.174930" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/restaurants/${restaurant_id}/orders</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.174115" elapsed="0.000935">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.175654" elapsed="0.000058"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.173530" elapsed="0.002682">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t15" name="Approve Restaurant" line="82">
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:27.178801" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/admin/restaurants/${restaurant_id}/approve</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.177981" elapsed="0.000929">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.179484" elapsed="0.000053"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.177184" elapsed="0.002797">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t16" name="Disable Restaurant Admin" line="86">
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:27.182136" level="FAIL">Variable '${restaurant_id}' not found.</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/admin/restaurants/${restaurant_id}/disable</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.181398" elapsed="0.000835">Variable '${restaurant_id}' not found.</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:27.183082" elapsed="0.000075"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.180731" elapsed="0.002938">Variable '${restaurant_id}' not found.</status>
+</test>
+<test id="s1-t17" name="View Feedback" line="90">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:31.248666" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/feedback</msg>
+<msg time="2026-02-16T23:31:35.546272" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/feedback</msg>
+<msg time="2026-02-16T23:31:40.034605" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/feedback</msg>
+<msg time="2026-02-16T23:31:44.095499" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/admin/feedback (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/admin/feedback</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:27.185973" elapsed="16.916115">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/admin/feedback (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:31:44.102881" elapsed="0.000075"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:27.185298" elapsed="16.918380">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/admin/feedback (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</test>
+<test id="s1-t18" name="View Orders Admin" line="94">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T23:31:48.205378" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/orders</msg>
+<msg time="2026-02-16T23:31:52.476000" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/orders</msg>
+<msg time="2026-02-16T23:31:56.952022" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/orders</msg>
+<msg time="2026-02-16T23:32:01.003659" level="FAIL">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/admin/orders (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</msg>
+<var>${response}</var>
+<arg>foodie</arg>
+<arg>/api/v1/admin/orders</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-02-16T23:31:44.105261" elapsed="16.906537">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/admin/orders (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2026-02-16T23:32:01.012580" elapsed="0.000090"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:31:44.104610" elapsed="16.908753">ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/v1/admin/orders (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))</status>
+</test>
+<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
+<msg time="2026-02-16T23:32:01.015018" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2026-02-16T23:32:01.014795" elapsed="0.000351"/>
+</kw>
+<status status="FAIL" start="2026-02-16T23:30:36.090129" elapsed="84.925070"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="18" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="All Tests" id="s1" pass="0" fail="18" skip="0">All Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-16T23:30:40.454991" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants</msg>
+<msg time="2026-02-16T23:30:44.738527" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants</msg>
+<msg time="2026-02-16T23:30:49.192069" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants</msg>
+<msg time="2026-02-16T23:30:57.366806" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/users/register</msg>
+<msg time="2026-02-16T23:31:01.664078" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/users/register</msg>
+<msg time="2026-02-16T23:31:06.155906" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/users/register</msg>
+<msg time="2026-02-16T23:31:14.290312" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating=</msg>
+<msg time="2026-02-16T23:31:18.582030" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating=</msg>
+<msg time="2026-02-16T23:31:23.040571" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/restaurants/search?name=Food+Hub&amp;location=City+Center&amp;dish=Pizza&amp;rating=</msg>
+<msg time="2026-02-16T23:31:31.248666" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/feedback</msg>
+<msg time="2026-02-16T23:31:35.546272" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/feedback</msg>
+<msg time="2026-02-16T23:31:40.034605" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/feedback</msg>
+<msg time="2026-02-16T23:31:48.205378" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/orders</msg>
+<msg time="2026-02-16T23:31:52.476000" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/orders</msg>
+<msg time="2026-02-16T23:31:56.952022" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /api/v1/admin/orders</msg>
+</errors>
+</robot>
