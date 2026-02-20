@@ -1,0 +1,20 @@
+TEST APP EXECUTION LOG
+======================
+test_01_reg_res: PASS
+test_02_dup_res: PASS
+test_03_view_res: PASS
+test_04_upd_res: PASS
+test_05_dis_res: PASS
+test_06_add_dish: PASS
+test_07_upd_dish: PASS
+test_08_tog_dish: PASS
+test_09_del_dish: PASS
+test_10_reg_user: PASS
+test_11_dup_user: PASS
+test_12_order: PASS
+test_13_v_u_o: PASS
+test_14_v_r_o: PASS
+test_15_rate: PASS
+test_16_adm_app: PASS
+test_17_adm_dis: PASS
+test_18_adm_ord: PASS
