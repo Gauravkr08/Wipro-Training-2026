@@ -4,7 +4,343 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4038b915-975a-476d-95e0-08ae2f1d5879" name="Changes" comment="update" />
+    <list default="true" id="4038b915-975a-476d-95e0-08ae2f1d5879" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/Wipro-Training-2026.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Wipro-Training-2026.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/config/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/data/test_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/data/test_data_user2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/pages/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/pages/base_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/pages/cart_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/pages/home_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/pages/login_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/pytest.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/reports/pytest_terminal_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/reports/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771413845.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771480519.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771480854.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771481170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771482367.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771482678.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771486684.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771486941.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771487495.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771487805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771519120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771519973.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771521080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771564825.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771564942.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771567954.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/01_Register_Page_1771568422.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771413863.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771480536.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771480874.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771481189.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771482385.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771482695.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771486699.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771486957.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771487513.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771487822.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771519134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771521096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771564833.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771564950.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771567972.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/02_Registration_Success_1771568438.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771413875.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771480547.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771480888.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771481199.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771482396.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771482706.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771486708.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771486966.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771487524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771487833.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771521107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771564835.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771564952.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771567982.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/03_Search_Query_1_1771568451.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771413907.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771480920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771481229.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771482428.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771482737.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771486733.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771486990.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771487555.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771487864.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771521137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771564839.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771564958.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771568039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/06_Verify_Product_Found_1771568487.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771413917.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771480931.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771481239.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771482438.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771482747.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771486742.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771486998.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771487566.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771487874.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771564841.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771564959.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771568080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/07_Category_Computers_1771568498.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771413926.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771480940.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771481248.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771482448.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771482757.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771486750.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771487006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771487577.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771487884.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771564843.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771564961.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771568122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/08_Category_Notebooks_1771568511.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771413938.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771480952.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771481264.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771482461.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771482770.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771486760.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771487017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771487589.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771487897.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771564847.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771564965.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771568162.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/09_Currency_Euro_1771568524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771413960.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771480975.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771481287.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771482484.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771482793.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771486781.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771487036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771487612.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771487920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771564853.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771564972.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771568187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/11_Sort_LowToHigh_1771568547.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771480998.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771481311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771482507.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771482816.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771486800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771487055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771487636.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771487943.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771568211.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/13_Added_To_Wishlist_1771568575.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771413996.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771481009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771481321.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771482517.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771482826.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771486808.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771487063.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771487646.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771487954.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771564864.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771564981.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771568222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/14_View_Wishlist_1771568586.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771414013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771481024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771481332.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771482531.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771482837.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771486817.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771487072.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771487657.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771487965.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771564885.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771565001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771568234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/15_Added_To_Cart_1771568604.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771414023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771481036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771481346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771482544.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771482849.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771486827.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771487082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771487670.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771487977.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771564889.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771565005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771568246.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/16_Shopping_Cart_View_1771568617.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771414071.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771481093.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771481408.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771482599.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771482904.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771486878.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771487131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771487726.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771488034.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771564917.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771565033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771568305.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/19_Item_Removed_1771568671.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771414082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771481104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771481418.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771482610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771482914.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771486886.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771487139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771487736.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771488044.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771564918.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771565037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771568338.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/20_Footer_Sitemap_1771568682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771414155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771481154.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771481470.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771482663.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771482966.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771486928.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771487181.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771487790.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771488097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771564920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771565041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771568407.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/screenshots/Pytest screenshots/25_Logout_Session_1771568737.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/tests/test_app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/pytest framework/utilities/data_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/reports/generate_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/keywords/CsvLib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/keywords/StealthLib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/reports/log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/reports/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/reports/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/reports/robot_terminal_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/resources/common.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/run_all_robot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/01_Register_Page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/02_Reg_Result.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/03_Search_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/07_Computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/08_Notebooks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/09_Euro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/11_Sorted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/13_Wishlist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/14_Wishlist_Page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/15_Added_Cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/16_Cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/17_Qty_Update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/20_Sitemap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/25_Final_Logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/screenshots/Robot screenshots/selenium-screenshot-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/test_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/test_data_user2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/robot framework/tests/shop.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/Activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/dotenv.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/f2py.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/libdoc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/normalizer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/pip.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/pip3.12.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/pip3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/py.test.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/pytest.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/rebot.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/robot.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/selib.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/Scripts/websockets.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv312/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/Activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/dotenv.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/f2py.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/libdoc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/normalizer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/pip.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/pip3.12.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/pip3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/py.test.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/pytest.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/rebot.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/robot.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/selib.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/Scripts/websockets.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Capstone Project/venv456/pyvenv.cfg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -274,30 +610,6 @@
       <workItem from="1770785135246" duration="2548000" />
       <workItem from="1770800792127" duration="8841000" />
       <workItem from="1770880246667" duration="7000" />
-    </task>
-    <task id="LOCAL-00008" summary="completed my day1 work">
-      <option name="closed" value="true" />
-      <created>1768400290251</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1768400290251</updated>
-    </task>
-    <task id="LOCAL-00009" summary="completed my day1 work">
-      <option name="closed" value="true" />
-      <created>1768401714503</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1768401714503</updated>
-    </task>
-    <task id="LOCAL-00010" summary="completed my day1 work">
-      <option name="closed" value="true" />
-      <created>1768402529487</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1768402529487</updated>
     </task>
     <task id="LOCAL-00011" summary="completed my day2 work">
       <option name="closed" value="true" />
@@ -667,7 +979,31 @@
       <option name="project" value="LOCAL" />
       <updated>1771595628485</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="update">
+      <option name="closed" value="true" />
+      <created>1771595651494</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1771595651494</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update">
+      <option name="closed" value="true" />
+      <created>1771595691490</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1771595691490</updated>
+    </task>
+    <task id="LOCAL-00059" summary="update">
+      <option name="closed" value="true" />
+      <created>1771657639573</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1771657639573</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
