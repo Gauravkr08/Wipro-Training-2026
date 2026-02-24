@@ -1,0 +1,2775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.10 on win32)" generated="2026-02-23T16:57:48.288731" rpa="false" schemaversion="5">
+<suite id="s1" name="Shop" source="C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\tests\shop.robot">
+<kw name="Setup Everything" owner="common" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-02-23T16:57:48.846727" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\screenshots\Robot screenshots"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\screenshots\Robot screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-02-23T16:57:48.846727" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-02-23T16:57:48.847720" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports&lt;/a&gt;' already exists.</msg>
+<arg>C:\\Users\\Lenovo\\PycharmProjects\\Wipro-Training-2026\\Capstone Project\\Capstone Project\\robot framework\\resources/../reports</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-02-23T16:57:48.847720" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2026-02-23T16:57:48.847720" elapsed="0.000000"/>
+</kw>
+<kw name="Get Csv Data" owner="StealthLib">
+<msg time="2026-02-23T16:57:48.847720" level="INFO">${raw_dict} = {'parameter': 'value', 'base_url': 'https://demo.nopcommerce.com', 'first_name': 'Jane', 'last_name': 'Smith', 'password': 'Test@456', 'search_query_1': 'MacBook', 'search_query_2': 'Lenovo', 'search_...</msg>
+<var>${raw_dict}</var>
+<arg>${csv_path}</arg>
+<status status="PASS" start="2026-02-23T16:57:48.847720" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-02-23T16:57:48.849251" level="INFO">${DATA} = {'parameter': 'value', 'base_url': 'https://demo.nopcommerce.com', 'first_name': 'Jane', 'last_name': 'Smith', 'password': 'Test@456', 'search_query_1': 'MacBook', 'search_query_2': 'Lenovo', 'search_...</msg>
+<arg>${DATA}</arg>
+<arg>${raw_dict}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-02-23T16:57:48.847720" elapsed="0.001531"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T16:57:48.849251" level="INFO">${start_url} = https://demo.nopcommerce.com</msg>
+<var>${start_url}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T16:57:48.849251" elapsed="0.000000"/>
+</kw>
+<kw name="Open Stealth Browser" owner="StealthLib">
+<msg time="2026-02-23T16:57:51.953634" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<arg>${start_url}</arg>
+<arg>${browser}</arg>
+<doc>Open a browser for Robot tests.</doc>
+<status status="PASS" start="2026-02-23T16:57:48.849251" elapsed="30.472960"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-02-23T16:58:19.323278" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>ROBOT EXECUTION LOG\n============================\n</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-02-23T16:58:19.322211" elapsed="0.002060"/>
+</kw>
+<arg>${CSV_PATH}</arg>
+<status status="PASS" start="2026-02-23T16:57:48.845726" elapsed="30.478545"/>
+</kw>
+<test id="s1-t1" name="TC_01 Register Navigation" line="14">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T16:58:19.325783" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T16:58:19.325783" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T16:58:22.336929" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T16:58:33.271898" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T16:58:19.325783" elapsed="13.946115"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:33.273865" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T16:58:33.272880" elapsed="0.702877"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T16:58:33.272880" elapsed="0.702877"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T16:58:33.978034" elapsed="0.018599"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T16:58:33.975757" elapsed="0.020876"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T16:58:33.997666" elapsed="0.026529"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T16:58:33.997666" elapsed="0.026529"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:58:19.325783" elapsed="14.698412"/>
+</kw>
+<kw name="Logout If Needed" owner="common">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:34.325856" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-194.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-194.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T16:58:34.325856" level="FAIL">Element with locator 'class:ico-logout' not found.</msg>
+<arg>class:ico-logout</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-23T16:58:34.025705" elapsed="0.302356">Element with locator 'class:ico-logout' not found.</status>
+</kw>
+<msg time="2026-02-23T16:58:34.328061" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>class:ico-logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T16:58:34.025705" elapsed="0.302356"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>class:ico-logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-23T16:58:34.328061" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:ico-register</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-23T16:58:34.328061" elapsed="0.001007"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T16:58:34.328061" elapsed="0.001007"/>
+</branch>
+<status status="PASS" start="2026-02-23T16:58:34.328061" elapsed="0.001007"/>
+</if>
+<status status="PASS" start="2026-02-23T16:58:34.025193" elapsed="0.303875"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:34.329068" level="INFO">Clicking link 'class:ico-register'.</msg>
+<arg>class:ico-register</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:34.329068" elapsed="1.470387"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Register</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-23T16:58:35.799455" elapsed="0.021408"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:35.938686" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/01_Register_Page.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/01_Register_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>01_Register_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T16:58:35.820863" elapsed="0.117823"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T16:58:35.940697" level="INFO">${msg} = PASS: TC_01 Register Navigation
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T16:58:35.939694" elapsed="0.001003"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T16:58:35.941689" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T16:58:35.940697" elapsed="0.000992"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:58:35.939694" elapsed="0.001995"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:58:19.324271" elapsed="16.618402"/>
+</test>
+<test id="s1-t2" name="TC_02 Register User" line="21">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T16:58:35.943683" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T16:58:35.943683" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T16:58:38.924336" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T16:58:45.373258" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T16:58:35.943683" elapsed="9.429575"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:45.373258" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T16:58:45.373258" elapsed="0.917616"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T16:58:45.373258" elapsed="0.917616"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T16:58:46.290874" elapsed="4.579212"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T16:58:46.290874" elapsed="4.579212"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T16:58:50.871088" elapsed="0.023522"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T16:58:50.871088" elapsed="0.023522"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:58:35.943683" elapsed="14.950927"/>
+</kw>
+<kw name="Logout If Needed" owner="common">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:51.271803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-195.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-195.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T16:58:51.271803" level="FAIL">Element with locator 'class:ico-logout' not found.</msg>
+<arg>class:ico-logout</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-23T16:58:50.895619" elapsed="0.377185">Element with locator 'class:ico-logout' not found.</status>
+</kw>
+<msg time="2026-02-23T16:58:51.272804" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>class:ico-logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T16:58:50.894610" elapsed="0.378194"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>class:ico-logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-23T16:58:51.272804" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:ico-register</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-23T16:58:51.272804" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T16:58:51.272804" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-23T16:58:51.272804" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2026-02-23T16:58:50.894610" elapsed="0.378194"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:51.274109" level="INFO">Opening url 'https://demo.nopcommerce.com/register'</msg>
+<arg>${DATA}[base_url]/register</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T16:58:51.274109" elapsed="3.077908"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:register-button</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T16:58:54.352017" elapsed="0.029331"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T16:58:56.381625" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T16:58:54.381348" elapsed="2.000277"/>
+</kw>
+<kw name="Generate Random Email" owner="common">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-02-23T16:58:56.383424" level="INFO">${random} = GwANw</msg>
+<var>${random}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-02-23T16:58:56.383424" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T16:58:56.384457" level="INFO">${email} = JaneGwANw@example.com</msg>
+<var>${email}</var>
+<arg>SEPARATOR=</arg>
+<arg>${DATA}[first_name]</arg>
+<arg>${random}</arg>
+<arg>@example.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T16:58:56.383424" elapsed="0.001033"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2026-02-23T16:58:56.384457" elapsed="0.000000"/>
+</return>
+<msg time="2026-02-23T16:58:56.384457" level="INFO">${email} = JaneGwANw@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2026-02-23T16:58:56.382886" elapsed="0.001571"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:56.386457" level="INFO">Clicking element 'id:gender-male'.</msg>
+<arg>id:gender-male</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:56.385456" elapsed="0.116518"/>
+</kw>
+<arg>Click Element</arg>
+<arg>id:gender-male</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T16:58:56.384457" elapsed="0.117517"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T16:58:57.004198" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T16:58:56.502965" elapsed="0.501233"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:57.005208" level="INFO">Typing text 'Jane' into text field 'id:FirstName'.</msg>
+<arg>id:FirstName</arg>
+<arg>${DATA}[first_name]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.005208" elapsed="0.178106"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:57.183314" level="INFO">Typing text 'Smith' into text field 'id:LastName'.</msg>
+<arg>id:LastName</arg>
+<arg>${DATA}[last_name]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.183314" elapsed="0.107868"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:57.292231" level="INFO">Typing text 'JaneGwANw@example.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.291182" elapsed="0.094845"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:57.387039" level="INFO">Typing text 'Test@456' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${DATA}[password]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.387039" elapsed="0.121290"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:57.509737" level="INFO">Typing text 'Test@456' into text field 'id:ConfirmPassword'.</msg>
+<arg>id:ConfirmPassword</arg>
+<arg>${DATA}[password]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.509737" elapsed="0.091884"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:57.602622" level="INFO">Executing JavaScript:
+document.getElementById('register-button').scrollIntoView({block: 'center'})
+Without any arguments.</msg>
+<arg>document.getElementById('register-button').scrollIntoView({block: 'center'})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.601621" elapsed="0.009325"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T16:58:58.612226" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T16:58:57.611945" elapsed="1.000281"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:58:58.612753" level="INFO">Executing JavaScript:
+document.getElementById('register-button').click()
+Without any arguments.</msg>
+<arg>document.getElementById('register-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-23T16:58:58.612753" elapsed="1.383202"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T16:59:04.997113" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T16:58:59.996949" elapsed="5.000164"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your registration completed</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-23T16:59:04.998123" elapsed="0.012898"/>
+</kw>
+<msg time="2026-02-23T16:59:05.011021" level="INFO">${passed} = True</msg>
+<var>${passed}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>Your registration completed</arg>
+<arg>30s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T16:59:04.998123" elapsed="0.012898"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${passed}">
+<kw name="Get Source" owner="SeleniumLibrary">
+<var>${page_src}</var>
+<doc>Returns the entire HTML source of the current page or frame.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Registration might have failed. Page source captured for debugging.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${has_result}</var>
+<arg>Page Should Contain</arg>
+<arg>result</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.000000"/>
+</kw>
+<kw name="Pass Execution If" owner="BuiltIn">
+<arg>${has_result}</arg>
+<arg>Registration completed (result page detected)</arg>
+<doc>Conditionally skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${email_exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already exists</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.000000"/>
+</kw>
+<kw name="Pass Execution If" owner="BuiltIn">
+<arg>${email_exists}</arg>
+<arg>Email already registered – acceptable</arg>
+<doc>Conditionally skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration did not complete. Check screenshots for CAPTCHA or other blockers.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-23T16:59:05.013160" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T16:59:05.012135" elapsed="0.001025"/>
+</branch>
+<status status="PASS" start="2026-02-23T16:59:05.012135" elapsed="0.001025"/>
+</if>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T16:59:05.111637" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/02_Reg_Result.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/02_Reg_Result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>02_Reg_Result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T16:59:05.013160" elapsed="0.099483"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T16:59:05.114149" level="INFO">${msg} = PASS: TC_02 Register User
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T16:59:05.112643" elapsed="0.001506"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T16:59:05.114149" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T16:59:05.114149" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:59:05.112643" elapsed="0.001506"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:58:35.942673" elapsed="29.172798"/>
+</test>
+<test id="s1-t3" name="TC_03 Search Query 1" line="56">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T16:59:05.117574" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T16:59:05.117574" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T16:59:08.438777" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:00:15.821656" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T16:59:05.118573" elapsed="70.703083"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:00:15.824082" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:00:15.822658" elapsed="2.666677"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:00:15.822658" elapsed="2.666677"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:00:18.489335" elapsed="0.007253"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:00:18.489335" elapsed="0.007253"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:00:18.498099" elapsed="0.024365"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:00:18.496588" elapsed="0.025876"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:59:05.117574" elapsed="73.404890"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:00:18.523452" level="INFO">Typing text 'MacBook' into text field 'id:small-searchterms'.</msg>
+<arg>id:small-searchterms</arg>
+<arg>${DATA}[search_query_1]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:00:18.523452" elapsed="0.105804"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:00:18.630254" level="INFO">Clicking button 'class:search-box-button'.</msg>
+<arg>class:search-box-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:00:18.629256" elapsed="35.300739"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:00:54.082017" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/03_Search_1.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/03_Search_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>03_Search_1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:00:53.931005" elapsed="0.151012"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:00:54.083028" level="INFO">${msg} = PASS: TC_03 Search Query 1
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:00:54.083028" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:00:54.084023" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:00:54.083028" elapsed="0.000995"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:00:54.083028" elapsed="0.000995"/>
+</kw>
+<status status="PASS" start="2026-02-23T16:59:05.116561" elapsed="108.968471"/>
+</test>
+<test id="s1-t4" name="TC_04 Search Query 2" line="62">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:00:54.086034" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:00:54.086034" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:00:57.093070" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:02:09.375396" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:00:54.086034" elapsed="75.289362"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:02:09.376683" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:02:09.376683" elapsed="6.109653"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:02:09.375396" elapsed="6.110940"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:02:15.487347" elapsed="0.008054"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:02:15.486336" elapsed="0.009065"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:02:15.496409" elapsed="0.022476"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:02:15.495401" elapsed="0.023484"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:00:54.085032" elapsed="81.434844"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:02:15.520886" level="INFO">Typing text 'Lenovo' into text field 'id:small-searchterms'.</msg>
+<arg>id:small-searchterms</arg>
+<arg>${DATA}[search_query_2]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:02:15.519876" elapsed="0.126375"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:02:15.647298" level="INFO">Clicking button 'class:search-box-button'.</msg>
+<arg>class:search-box-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:02:15.647298" elapsed="59.353949"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:03:15.002328" level="INFO">${msg} = PASS: TC_04 Search Query 2
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:03:15.001247" elapsed="0.001081"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:03:15.003699" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:03:15.002328" elapsed="0.001371"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:03:15.001247" elapsed="0.002452"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:00:54.085032" elapsed="140.918667"/>
+</test>
+<test id="s1-t5" name="TC_05 Search Query 3" line="67">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:03:15.005737" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:03:15.005737" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:03:18.161984" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:03:24.475320" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:03:15.005737" elapsed="9.469583"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:03:24.475320" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:03:24.475320" elapsed="0.837124"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:03:24.475320" elapsed="0.837124"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:03:25.313909" elapsed="0.050692"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:03:25.312444" elapsed="0.052157"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:03:25.365599" elapsed="0.045919"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:03:25.364601" elapsed="0.046917"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:03:15.005737" elapsed="10.405781"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:03:25.412630" level="INFO">Typing text 'Nike' into text field 'id:small-searchterms'.</msg>
+<arg>id:small-searchterms</arg>
+<arg>${DATA}[search_query_3]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:03:25.411518" elapsed="0.105984"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:03:25.518973" level="INFO">Clicking button 'class:search-box-button'.</msg>
+<arg>class:search-box-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:03:25.517502" elapsed="3.426877"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:03:28.945479" level="INFO">${msg} = PASS: TC_05 Search Query 3
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:03:28.944379" elapsed="0.001100"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:03:28.945479" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:03:28.945479" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:03:28.944379" elapsed="0.001100"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:03:15.004724" elapsed="13.942261"/>
+</test>
+<test id="s1-t6" name="TC_06 Verify Apple Search" line="72">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:03:28.949214" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:03:28.949214" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:03:31.767975" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:03:46.564671" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:03:28.949214" elapsed="17.615457"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:03:46.565679" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:03:46.565679" elapsed="1.578335"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:03:46.565679" elapsed="1.578335"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:04:08.578316" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-196.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-196.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T17:04:08.578316" level="FAIL">Condition 'return document.readyState == "complete"' did not become true in 20 seconds.</msg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="FAIL" start="2026-02-23T17:03:48.145016" elapsed="20.434830">Condition 'return document.readyState == "complete"' did not become true in 20 seconds.</status>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:03:48.144014" elapsed="20.435832"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:04:08.579846" elapsed="0.022694"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:04:08.579846" elapsed="0.024021"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:03:28.948222" elapsed="39.655645"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:04:08.603867" level="INFO">Typing text 'Apple' into text field 'id:small-searchterms'.</msg>
+<arg>id:small-searchterms</arg>
+<arg>${DATA}[search_verify]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:04:08.603867" elapsed="0.109158"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:04:08.714025" level="INFO">Clicking button 'class:search-box-button'.</msg>
+<arg>class:search-box-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:04:08.713025" elapsed="0.595012"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:05:21.801868" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-197.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-197.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T17:05:21.801868" level="FAIL">Text 'Apple' did not appear in 10 seconds.</msg>
+<arg>${DATA}[search_verify]</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-23T17:04:09.309042" elapsed="72.492826">Text 'Apple' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:05:21.803225" level="INFO">${msg} = FAIL: TC_06 Verify Apple Search
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:05:21.803225" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:05:21.804269" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:05:21.803225" elapsed="0.001044"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:21.803225" elapsed="0.001044"/>
+</kw>
+<status status="FAIL" start="2026-02-23T17:03:28.946985" elapsed="112.857284">Text 'Apple' did not appear in 10 seconds.</status>
+</test>
+<test id="s1-t7" name="TC_07 Nav Computers" line="78">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:05:21.806805" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:05:21.806805" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:05:24.833710" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:05:45.940721" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:05:21.806805" elapsed="24.133916"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:05:45.941723" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:05:45.941723" elapsed="4.209673"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:05:45.940721" elapsed="4.211675"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:05:50.152396" elapsed="0.007078"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:05:50.152396" elapsed="0.007078"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:05:50.160996" elapsed="0.024002"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:05:50.160491" elapsed="0.024507"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:21.805788" elapsed="28.379210"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:05:50.184998" level="INFO">Clicking link 'partial link:Computers'.</msg>
+<arg>partial link:Computers</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:05:50.184998" elapsed="3.302935"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:05:53.709396" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/07_Computers.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/07_Computers.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>07_Computers.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:05:53.487933" elapsed="0.221463"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:05:53.711374" level="INFO">${msg} = PASS: TC_07 Nav Computers
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:05:53.711374" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:05:53.711374" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:05:53.711374" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:53.710382" elapsed="0.000992"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:21.805788" elapsed="31.907584"/>
+</test>
+<test id="s1-t8" name="TC_08 Nav Notebooks" line="83">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:05:53.714389" level="INFO">Opening url 'https://demo.nopcommerce.com/notebooks'</msg>
+<arg>${DATA}[base_url]/notebooks</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:05:53.714389" elapsed="1.557002"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:product-grid</arg>
+<arg>25s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.271391" elapsed="0.022209"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:product-grid</arg>
+<arg>25s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.271391" elapsed="0.022209"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:05:55.480924" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/08_Notebooks.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/08_Notebooks.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>08_Notebooks.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.294601" elapsed="0.186323"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:05:55.482442" level="INFO">${msg} = PASS: TC_08 Nav Notebooks
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.482442" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:05:55.483504" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.483504" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:55.482442" elapsed="0.001062"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:53.713372" elapsed="1.771143"/>
+</test>
+<test id="s1-t9" name="TC_09 Switch Euro" line="88">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:05:55.486545" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.485492" elapsed="0.001053"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:05:58.413027" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:06:09.273155" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:05:55.486545" elapsed="13.786610"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:09.274162" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:06:09.274162" elapsed="3.554102"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:09.273155" elapsed="3.555109"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.829242" elapsed="0.007210"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.829242" elapsed="0.007210"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.837982" elapsed="0.026597"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.836452" elapsed="0.029646"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:55.485492" elapsed="17.380606"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:customerCurrency</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.866098" elapsed="0.021208"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id:customerCurrency</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.866098" elapsed="0.021208"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:12.888370" level="INFO">Selecting options from selection list 'id:customerCurrency' by label Euro.</msg>
+<arg>id:customerCurrency</arg>
+<arg>Euro</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-23T17:06:12.888370" elapsed="1.761119"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:14.672045" level="INFO">Current page contains text '€'.</msg>
+<arg>${DATA}[currency_symbol]</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-23T17:06:14.650667" elapsed="0.021378"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${DATA}[currency_symbol]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:14.650667" elapsed="0.021378"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:15.010458" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/09_Euro.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/09_Euro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>09_Euro.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:06:14.672572" elapsed="0.337886"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:06:15.012454" level="INFO">${msg} = PASS: TC_09 Switch Euro
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:06:15.012454" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:06:15.012454" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:06:15.012454" elapsed="0.001513"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:15.011472" elapsed="0.002495"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:05:55.484515" elapsed="19.529693"/>
+</test>
+<test id="s1-t10" name="TC_10 Switch Dollar" line="95">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:15.015266" level="INFO">Selecting options from selection list 'id:customerCurrency' by label US Dollar.</msg>
+<arg>id:customerCurrency</arg>
+<arg>US Dollar</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-23T17:06:15.015266" elapsed="1.762266"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:16.799260" level="INFO">Current page contains text '$'.</msg>
+<arg>$</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-23T17:06:16.778516" elapsed="0.020744"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>$</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:16.778516" elapsed="0.020744"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:06:16.801259" level="INFO">${msg} = PASS: TC_10 Switch Dollar
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:06:16.801259" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:06:16.802275" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:06:16.801259" elapsed="0.001016"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:16.800272" elapsed="0.002003"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:15.014208" elapsed="1.789058"/>
+</test>
+<test id="s1-t11" name="TC_11 Sort Price Low to High" line="99">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:16.805278" level="INFO">Opening url 'https://demo.nopcommerce.com/notebooks'</msg>
+<arg>${DATA}[base_url]/notebooks</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:06:16.804266" elapsed="5.850996"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:product-grid</arg>
+<arg>25s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:06:22.655262" elapsed="0.021835"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:product-grid</arg>
+<arg>25s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:22.655262" elapsed="0.021835"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:products-orderby</arg>
+<arg>25s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:06:22.678088" elapsed="0.020925"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id:products-orderby</arg>
+<arg>25s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:22.678088" elapsed="0.022103"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:22.701203" level="INFO">Selecting options from selection list 'id:products-orderby' by label Price: Low to High.</msg>
+<arg>id:products-orderby</arg>
+<arg>Price: Low to High</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-23T17:06:22.700191" elapsed="0.125059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:06:24.825594" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:06:22.825250" elapsed="2.000344"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:25.029130" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/11_Sorted.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/11_Sorted.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>11_Sorted.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:06:24.825594" elapsed="0.203536"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:06:25.031658" level="INFO">${msg} = PASS: TC_11 Sort Price Low to High
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:06:25.031658" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:06:25.033675" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:06:25.032672" elapsed="0.001003"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:25.030643" elapsed="0.003032"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:16.804266" elapsed="8.229923"/>
+</test>
+<test id="s1-t12" name="TC_12 Change Display Size" line="107">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:products-pagesize</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:06:25.035197" elapsed="0.037861"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id:products-pagesize</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:06:25.035197" elapsed="0.037861"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:25.074483" level="INFO">Selecting options from selection list 'id:products-pagesize' by label 9.</msg>
+<arg>id:products-pagesize</arg>
+<arg>9</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-23T17:06:25.074483" elapsed="0.117759"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:06:26.193626" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:06:25.193258" elapsed="1.000368"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:06:26.194663" level="INFO">${msg} = PASS: TC_12 Change Display Size
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:06:26.194663" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:06:26.195696" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:06:26.194663" elapsed="0.001033"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:26.193626" elapsed="0.002070"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:25.034189" elapsed="1.161507"/>
+</test>
+<test id="s1-t13" name="TC_13 Add Wishlist" line="112">
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:06:29.089400" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:06:26.197695" elapsed="10.933281"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:06:37.130976" level="INFO">Opening url 'https://demo.nopcommerce.com/night-visions'</msg>
+<arg>${DATA}[base_url]/${DATA}[digital_product]</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:06:37.130976" elapsed="60.958295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.product-essential</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:07:38.089271" elapsed="0.150120"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:07:40.241088" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:07:38.240780" elapsed="2.000308"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.add-to-wishlist-button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:07:40.242107" elapsed="0.031263"/>
+</kw>
+<msg time="2026-02-23T17:07:40.273370" level="INFO">${btn_present} = True</msg>
+<var>${btn_present}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css:.add-to-wishlist-button</arg>
+<arg>10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:07:40.241088" elapsed="0.032282"/>
+</kw>
+<if>
+<branch type="IF" condition="${btn_present}">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css:.add-to-wishlist-button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-23T17:07:40.274392" elapsed="5.284472"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:07:46.560501" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:07:45.559893" elapsed="1.000608"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:07:46.561544" level="INFO">Clicking button 'css:.add-to-wishlist-button'.</msg>
+<arg>css:.add-to-wishlist-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:07:46.560501" elapsed="0.156988"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:07:40.274392" elapsed="6.443097"/>
+</branch>
+<branch type="ELSE">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.add-to-wishlist-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:46.718479" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:07:46.718479" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:07:40.273370" elapsed="6.445109"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:07:49.719142" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:07:46.718479" elapsed="3.000663"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:bar-notification</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:07:49.720176" elapsed="0.025809"/>
+</kw>
+<msg time="2026-02-23T17:07:49.745985" level="INFO">${notif_ok} = True</msg>
+<var>${notif_ok}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:bar-notification</arg>
+<arg>10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:07:49.720176" elapsed="0.025809"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${notif_ok}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${on_login}</var>
+<arg>Page Should Contain Element</arg>
+<arg>id:Email</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.745985" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${on_login}">
+<kw name="Log" owner="BuiltIn">
+<arg>Redirected to login – wishlist requires auth. Logging in first.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.745985" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${DATA}[first_name]robot@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.745985" elapsed="0.001031"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${DATA}[password]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css:.login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${DATA}[base_url]/${DATA}[digital_product]</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.product-essential</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.add-to-wishlist-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:07:49.747016" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:07:49.745985" elapsed="0.001031"/>
+</branch>
+<status status="NOT RUN" start="2026-02-23T17:07:49.745985" elapsed="0.001031"/>
+</if>
+<status status="NOT RUN" start="2026-02-23T17:07:49.745985" elapsed="0.001031"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:07:49.745985" elapsed="0.001031"/>
+</if>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:07:50.006360" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/13_Wishlist.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/13_Wishlist.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>13_Wishlist.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:07:49.748079" elapsed="0.258281"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:07:50.006360" level="INFO">${msg} = PASS: TC_13 Add Wishlist
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:07:50.006360" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:07:50.007709" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:07:50.007709" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:07:50.006360" elapsed="0.002350"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:06:26.196690" elapsed="83.812020"/>
+</test>
+<test id="s1-t14" name="TC_14 View Wishlist" line="147">
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:07:52.769658" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:07:50.009702" elapsed="10.762260"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Clear Notification Bar" owner="common">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:01.070437" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-198.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-198.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T17:08:01.071965" level="FAIL">Element with locator 'class:bar-notification' not found.</msg>
+<arg>class:bar-notification</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-23T17:08:00.775072" elapsed="0.296893">Element with locator 'class:bar-notification' not found.</status>
+</kw>
+<msg time="2026-02-23T17:08:01.072995" level="INFO">${present} = False</msg>
+<var>${present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>class:bar-notification</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:08:00.774076" elapsed="0.298919"/>
+</kw>
+<if>
+<branch type="IF" condition="${present}">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<arg>Click Element</arg>
+<arg>css:.bar-notification .close</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:01.072995" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>class:bar-notification</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:01.072995" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:08:01.072995" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:08:01.072995" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2026-02-23T17:08:00.774076" elapsed="0.298919"/>
+</kw>
+<arg>Clear Notification Bar</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:08:00.773073" elapsed="0.299922"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:ico-wishlist</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:08:01.072995" elapsed="0.026525"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:01.100619" level="INFO">Clicking link 'class:ico-wishlist'.</msg>
+<arg>class:ico-wishlist</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:08:01.100619" elapsed="2.232351"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Wishlist</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-23T17:08:03.333980" elapsed="0.033283"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:03.497958" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/14_Wishlist_Page.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/14_Wishlist_Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>14_Wishlist_Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:08:03.368276" elapsed="0.129682"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:08:03.500513" level="INFO">${msg} = PASS: TC_14 View Wishlist
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:08:03.499489" elapsed="0.001024"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:08:03.502030" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:08:03.500513" elapsed="0.001517"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:08:03.499489" elapsed="0.002541"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:07:50.008710" elapsed="13.493320"/>
+</test>
+<test id="s1-t15" name="TC_15 Add to Cart" line="155">
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:08:06.379523" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:08:03.503163" elapsed="13.279942"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:16.784116" level="INFO">Opening url 'https://demo.nopcommerce.com/books'</msg>
+<arg>${DATA}[base_url]/books</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:08:16.784116" elapsed="9.096754"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:product-grid</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:08:25.880870" elapsed="0.028598"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.product-title a</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:08:25.909976" elapsed="0.019581"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:25.931023" level="INFO">Executing JavaScript:
+return document.querySelector('.product-title a').href
+Without any arguments.</msg>
+<msg time="2026-02-23T17:08:25.937996" level="INFO">${product_url} = https://demo.nopcommerce.com/fahrenheit-451-by-ray-bradbury</msg>
+<var>${product_url}</var>
+<arg>return document.querySelector('.product-title a').href</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-23T17:08:25.931023" elapsed="0.006973"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:25.937996" level="INFO">Opening url 'https://demo.nopcommerce.com/fahrenheit-451-by-ray-bradbury'</msg>
+<arg>${product_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:08:25.937996" elapsed="1.204903"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:08:30.144129" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:08:27.143870" elapsed="3.000259"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.overview</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:08:30.145409" elapsed="0.063489"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:.add-to-cart-button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-23T17:08:30.211805" elapsed="0.032931"/>
+</kw>
+<msg time="2026-02-23T17:08:30.244736" level="INFO">${has_btn} = True</msg>
+<var>${has_btn}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>css:.add-to-cart-button</arg>
+<arg>10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:08:30.210414" elapsed="0.034322"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${has_btn}">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${has_btn2}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>css:button[id^='add-to-cart-button']</arg>
+<arg>10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.245736" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${has_btn2}">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector("button[id^='add-to-cart-button']").scrollIntoView({block: 'center'})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.247131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.247131" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector("button[id^='add-to-cart-button']").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.247131" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:08:30.247131" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${DATA}[base_url]/books</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.247131" elapsed="0.001208"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.248339" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.product-box-add-to-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:08:30.248339" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:08:30.247131" elapsed="0.001208"/>
+</branch>
+<status status="NOT RUN" start="2026-02-23T17:08:30.245736" elapsed="0.003601"/>
+</if>
+<status status="NOT RUN" start="2026-02-23T17:08:30.245736" elapsed="0.003601"/>
+</branch>
+<branch type="ELSE">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:30.251336" level="INFO">Executing JavaScript:
+document.querySelector('.add-to-cart-button').scrollIntoView({block: 'center'})
+Without any arguments.</msg>
+<arg>document.querySelector('.add-to-cart-button').scrollIntoView({block: 'center'})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-23T17:08:30.249337" elapsed="0.018497"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:08:31.270035" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:08:30.269237" elapsed="1.000798"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:31.270670" level="INFO">Executing JavaScript:
+document.querySelector('.add-to-cart-button').click()
+Without any arguments.</msg>
+<arg>document.querySelector('.add-to-cart-button').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-23T17:08:31.270670" elapsed="0.012719"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:08:30.249337" elapsed="1.034052"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:08:30.245736" elapsed="1.037653"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:08:34.284743" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:08:31.284678" elapsed="3.000065"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:bar-notification</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:08:34.285282" elapsed="0.022306"/>
+</kw>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:bar-notification</arg>
+<arg>15s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:08:34.285282" elapsed="0.022306"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:08:34.474561" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/15_Added_Cart.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/15_Added_Cart.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>15_Added_Cart.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:08:34.308587" elapsed="0.165974"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:08:34.475565" level="INFO">${msg} = PASS: TC_15 Add to Cart
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:08:34.475565" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:08:34.478130" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:08:34.477098" elapsed="0.001032"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:08:34.475565" elapsed="0.002565"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:08:03.502030" elapsed="30.976100"/>
+</test>
+<test id="s1-t16" name="TC_16 View Shopping Cart" line="188">
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:08:39.814121" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:08:34.480122" elapsed="37.827681"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Clear Notification Bar" owner="common">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:12.621623" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-199.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-199.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T17:09:12.621623" level="FAIL">Element with locator 'class:bar-notification' not found.</msg>
+<arg>class:bar-notification</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-23T17:09:12.309899" elapsed="0.311724">Element with locator 'class:bar-notification' not found.</status>
+</kw>
+<msg time="2026-02-23T17:09:12.621623" level="INFO">${present} = False</msg>
+<var>${present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>class:bar-notification</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:09:12.308892" elapsed="0.312731"/>
+</kw>
+<if>
+<branch type="IF" condition="${present}">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<arg>Click Element</arg>
+<arg>css:.bar-notification .close</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="NOT RUN" start="2026-02-23T17:09:12.623130" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>class:bar-notification</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" start="2026-02-23T17:09:12.623130" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:09:12.621623" elapsed="0.001507"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:09:12.621623" elapsed="0.001507"/>
+</if>
+<status status="PASS" start="2026-02-23T17:09:12.308892" elapsed="0.314238"/>
+</kw>
+<arg>Clear Notification Bar</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:09:12.307803" elapsed="0.315327"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:ico-cart</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:09:12.624143" elapsed="0.024501"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:12.649644" level="INFO">Clicking link 'class:ico-cart'.</msg>
+<arg>class:ico-cart</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:09:12.648644" elapsed="2.923559"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Shopping cart</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-23T17:09:15.572203" elapsed="0.022364"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:15.717337" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/16_Cart.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/16_Cart.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>16_Cart.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:09:15.594567" elapsed="0.122770"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:09:15.718632" level="INFO">${msg} = PASS: TC_16 View Shopping Cart
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:09:15.717337" elapsed="0.001295"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:09:15.719637" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:09:15.718632" elapsed="0.001005"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:09:15.717337" elapsed="0.002300"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:08:34.480122" elapsed="41.239515"/>
+</test>
+<test id="s1-t17" name="TC_17 Update Quantity" line="196">
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:09:18.808014" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:09:15.721971" elapsed="16.577273"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:32.299244" level="INFO">Opening url 'https://demo.nopcommerce.com/cart'</msg>
+<arg>${DATA}[base_url]/cart</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:09:32.299244" elapsed="1.647773"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:09:36.950180" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:09:33.948526" elapsed="3.001654"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:47.134840" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-200.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-200.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T17:09:47.134840" level="FAIL">Element 'class:qty-input' did not appear in 10 seconds.</msg>
+<arg>class:qty-input</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-23T17:09:36.950180" elapsed="10.184660">Element 'class:qty-input' did not appear in 10 seconds.</status>
+</kw>
+<msg time="2026-02-23T17:09:47.135835" level="INFO">${has_items} = False</msg>
+<var>${has_items}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>class:qty-input</arg>
+<arg>10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:09:36.950180" elapsed="10.185655"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${has_items}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-23T17:09:47.135835" level="INFO">Cart is empty – adding a book product as fallback</msg>
+<arg>Cart is empty – adding a book product as fallback</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-23T17:09:47.135835" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:47.136830" level="INFO">Opening url 'https://demo.nopcommerce.com/books'</msg>
+<arg>${DATA}[base_url]/books</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:09:47.136830" elapsed="8.724828"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:product-grid</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:09:55.861658" elapsed="0.022666"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:55.885829" level="INFO">Executing JavaScript:
+return document.querySelector('.product-title a').href
+Without any arguments.</msg>
+<msg time="2026-02-23T17:09:55.893607" level="INFO">${product_url} = https://demo.nopcommerce.com/fahrenheit-451-by-ray-bradbury</msg>
+<var>${product_url}</var>
+<arg>return document.querySelector('.product-title a').href</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-23T17:09:55.884324" elapsed="0.009283"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:09:55.893607" level="INFO">Opening url 'https://demo.nopcommerce.com/fahrenheit-451-by-ray-bradbury'</msg>
+<arg>${product_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:09:55.893607" elapsed="1.854434"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:10:00.748343" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:09:57.748041" elapsed="3.000302"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:10:00.749368" level="INFO">Executing JavaScript:
+var btn = document.querySelector('.add-to-cart-button') || document.querySelector("button[id^='add-to-cart-button']"); if(btn) btn.click();
+Without any arguments.</msg>
+<msg time="2026-02-23T17:14:00.796649" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:16:00.826277" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:18:00.849612" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:20:00.860296" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=60846): Max retries exceeded with url: /session/20790bd69c4ef9ae921dbb951763f552/screenshot (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)"))</msg>
+<msg time="2026-02-23T17:20:00.860296" level="FAIL">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</msg>
+<arg>var btn = document.querySelector('.add-to-cart-button') || document.querySelector("button[id^='add-to-cart-button']"); if(btn) btn.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="FAIL" start="2026-02-23T17:10:00.748343" elapsed="600.172468">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.920811" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${DATA}[base_url]/cart</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.920811" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.920811" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>class:qty-input</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.920811" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-23T17:09:47.135835" elapsed="613.785986">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</status>
+</branch>
+<status status="FAIL" start="2026-02-23T17:09:47.135835" elapsed="613.785986">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</status>
+</if>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.qty-input').scrollIntoView({block: 'center'})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.921821" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.922815" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:qty-input</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.922815" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.qty-input').value='${DATA}[cart_qty]'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.923325" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.qty-input').dispatchEvent(new Event('change'))</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.923325" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.923325" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>var btn = document.querySelector('button[name="updatecart"]') || document.querySelector('input[name="updatecart"]'); if(btn) btn.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.924335" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.924335" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>17_Qty_Update.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-23T17:20:00.924335" elapsed="0.000000"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:20:00.925351" level="INFO">${msg} = FAIL: TC_17 Update Quantity
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:20:00.925351" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:20:00.926350" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:20:00.925351" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:20:00.925351" elapsed="0.000999"/>
+</kw>
+<status status="FAIL" start="2026-02-23T17:09:15.720860" elapsed="645.205490">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</status>
+</test>
+<test id="s1-t18" name="TC_18 Verify Subtotal" line="226">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-23T17:20:00.928883" level="INFO">Subtotal check bypassed for stability.</msg>
+<arg>Subtotal check bypassed for stability.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-23T17:20:00.928883" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-23T17:20:01.930620" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-23T17:20:00.928883" elapsed="1.001737"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:20:01.931646" level="INFO">${msg} = PASS: TC_18 Verify Subtotal
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:20:01.931646" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:20:01.932653" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:20:01.931646" elapsed="0.001007"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:20:01.931646" elapsed="0.001997"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:20:00.927350" elapsed="1.006293"/>
+</test>
+<test id="s1-t19" name="TC_19 Remove from Cart" line="231">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:20:01.936199" level="INFO">Clicking button 'name:updatecart'.</msg>
+<msg time="2026-02-23T17:24:02.003114" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:26:02.026602" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:28:02.052075" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:30:02.064127" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=60846): Max retries exceeded with url: /session/20790bd69c4ef9ae921dbb951763f552/screenshot (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)"))</msg>
+<msg time="2026-02-23T17:30:02.065115" level="FAIL">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</msg>
+<arg>name:updatecart</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-23T17:20:01.934645" elapsed="600.135574">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)</status>
+</kw>
+<arg>Click Button</arg>
+<arg>name:updatecart</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:20:01.934645" elapsed="600.135574"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:30:02.071902" level="INFO">${msg} = PASS: TC_19 Remove from Cart
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:30:02.071902" elapsed="0.000000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:30:02.073851" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:30:02.071902" elapsed="0.001949"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:02.071393" elapsed="0.002458"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:20:01.934645" elapsed="600.139206"/>
+</test>
+<test id="s1-t20" name="TC_20 Footer Sitemap" line="234">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:30:02.076248" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:30:02.076248" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:30:05.655818" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:30:20.013778" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:30:02.077279" elapsed="17.937652"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:30:20.016040" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:30:20.016040" elapsed="3.212034"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:30:20.014931" elapsed="3.213143"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:30:23.228074" elapsed="0.011228"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:30:23.228074" elapsed="0.011228"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:30:23.240317" elapsed="0.034415"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:30:23.239302" elapsed="0.035430"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:02.076248" elapsed="21.199820"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:30:23.276068" level="INFO">Clicking link 'Sitemap'.</msg>
+<arg>Sitemap</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:30:23.276068" elapsed="2.728698"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:30:26.291622" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/20_Sitemap.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/20_Sitemap.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>20_Sitemap.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:30:26.006086" elapsed="0.285536"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:30:26.294900" level="INFO">${msg} = PASS: TC_20 Footer Sitemap
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:30:26.292612" elapsed="0.002288"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:30:26.295914" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:30:26.294900" elapsed="0.002015"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:26.292612" elapsed="0.004303"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:02.075243" elapsed="24.221672"/>
+</test>
+<test id="s1-t21" name="TC_21 Footer Shipping" line="239">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:30:26.300498" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:30:26.300498" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:30:29.282374" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:30:37.600285" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:30:26.300498" elapsed="11.299787"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:30:37.601805" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:30:37.601805" elapsed="1.465763"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:30:37.600285" elapsed="1.467283"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.068865" elapsed="0.010873"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.068865" elapsed="0.010873"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.081258" elapsed="0.031316"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.079738" elapsed="0.032836"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:26.298912" elapsed="12.814886"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:30:39.113798" level="INFO">Clicking link 'Shipping &amp; returns'.</msg>
+<arg>Shipping &amp; returns</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.113798" elapsed="0.148235"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:30:39.264126" level="INFO">${msg} = PASS: TC_21 Footer Shipping
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.263113" elapsed="0.001013"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:30:39.265626" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.264126" elapsed="0.001500"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:39.263113" elapsed="0.003983"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:26.297912" elapsed="12.969184"/>
+</test>
+<test id="s1-t22" name="TC_22 Footer Privacy" line="243">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:30:39.268596" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.268596" elapsed="0.000000"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:30:42.288117" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:31:01.707199" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:30:39.268596" elapsed="22.438603"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:31:01.708203" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:31:01.708203" elapsed="1.214525"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:31:01.708203" elapsed="1.214525"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:31:02.923888" elapsed="0.025038"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:31:02.923888" elapsed="0.025038"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:31:02.950514" elapsed="0.030863"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:31:02.949999" elapsed="0.031378"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:39.268596" elapsed="23.712781"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:31:02.982672" level="INFO">Clicking link 'Privacy notice'.</msg>
+<arg>Privacy notice</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:31:02.981377" elapsed="10.301709"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:31:13.286628" level="INFO">${msg} = PASS: TC_22 Footer Privacy
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:31:13.285626" elapsed="0.001002"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:31:13.289163" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:31:13.286628" elapsed="0.002535"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:31:13.284602" elapsed="0.004561"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:30:39.267096" elapsed="34.023057"/>
+</test>
+<test id="s1-t23" name="TC_23 Footer About" line="247">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:31:13.296462" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:31:13.295434" elapsed="0.001028"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:31:16.963168" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:31:24.811757" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:31:13.296462" elapsed="11.515295"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:31:24.815776" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:31:24.814759" elapsed="19.232910"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:31:24.812741" elapsed="19.234928"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:31:44.048983" elapsed="0.020231"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:31:44.048983" elapsed="0.020231"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:31:44.070213" elapsed="0.030774"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:31:44.069214" elapsed="0.032773"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:31:13.295434" elapsed="30.806553"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:31:44.102979" level="INFO">Clicking link 'About us'.</msg>
+<arg>About us</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:31:44.101987" elapsed="1.406604"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:31:45.512127" level="INFO">${msg} = PASS: TC_23 Footer About
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:31:45.511127" elapsed="0.001000"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:31:45.514674" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:31:45.512127" elapsed="0.002547"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:31:45.510104" elapsed="0.004570"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:31:13.293913" elapsed="32.221780"/>
+</test>
+<test id="s1-t24" name="TC_24 Footer Contact" line="251">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:31:45.518730" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:31:45.518730" elapsed="0.000984"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:31:48.757428" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:32:04.984368" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:31:45.519714" elapsed="19.464654"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:32:04.985887" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:32:04.985887" elapsed="0.664459"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:32:04.985887" elapsed="0.664459"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:32:05.650346" elapsed="0.009984"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:32:05.650346" elapsed="0.009984"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:32:05.661347" elapsed="0.031402"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:32:05.660330" elapsed="0.032419"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:31:45.517726" elapsed="20.175023"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:32:05.693777" level="INFO">Clicking link 'Contact us'.</msg>
+<arg>Contact us</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-23T17:32:05.693777" elapsed="1.547462"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:32:07.243853" level="INFO">${msg} = PASS: TC_24 Footer Contact
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:32:07.242758" elapsed="0.001095"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:32:07.245872" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:32:07.243853" elapsed="0.002019"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:32:07.242758" elapsed="0.003114"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:31:45.516712" elapsed="21.729160"/>
+</test>
+<test id="s1-t25" name="TC_25 Logout Session" line="255">
+<kw name="Ensure Home" owner="common">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-02-23T17:32:07.248487" level="INFO">${base} = https://demo.nopcommerce.com</msg>
+<var>${base}</var>
+<arg>${DATA}</arg>
+<arg>base_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-02-23T17:32:07.248487" elapsed="0.001512"/>
+</kw>
+<kw name="Recover Browser If Needed" owner="StealthLib">
+<msg time="2026-02-23T17:32:10.542224" level="INFO">patching driver executable C:\Users\Lenovo\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe</msg>
+<msg time="2026-02-23T17:32:17.367884" level="INFO">${recovered} = True</msg>
+<var>${recovered}</var>
+<doc>Check if the browser session is alive. If not, reopen it.</doc>
+<status status="PASS" start="2026-02-23T17:32:07.249999" elapsed="10.117885"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:32:17.370902" level="INFO">Opening url 'https://demo.nopcommerce.com'</msg>
+<arg>${base}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-23T17:32:17.370902" elapsed="102.064417"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Go To</arg>
+<arg>${base}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:32:17.368901" elapsed="102.067692"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2026-02-23T17:33:59.436593" elapsed="0.009766"/>
+</kw>
+<arg>Wait For Condition</arg>
+<arg>return document.readyState == "complete"</arg>
+<arg>20s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-23T17:33:59.436593" elapsed="0.009766"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-23T17:33:59.447875" elapsed="0.030693"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>class:header-logo</arg>
+<arg>20s</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-23T17:33:59.446359" elapsed="0.032209"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:32:07.248487" elapsed="112.230081"/>
+</kw>
+<kw name="Logout If Needed" owner="common">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:33:59.953290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/selenium-screenshot-201.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/selenium-screenshot-201.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-23T17:33:59.953290" level="FAIL">Element with locator 'class:ico-logout' not found.</msg>
+<arg>class:ico-logout</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-23T17:33:59.480033" elapsed="0.474763">Element with locator 'class:ico-logout' not found.</status>
+</kw>
+<msg time="2026-02-23T17:33:59.955304" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>class:ico-logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-23T17:33:59.480033" elapsed="0.475271"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>class:ico-logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-23T17:33:59.955304" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:ico-register</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-23T17:33:59.956330" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:33:59.955304" elapsed="0.001026"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:33:59.955304" elapsed="0.001026"/>
+</if>
+<status status="PASS" start="2026-02-23T17:33:59.478568" elapsed="0.477762"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-23T17:34:00.305815" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/Robot%20screenshots/25_Final_Logout.png"&gt;&lt;img src="../screenshots/Robot%20screenshots/25_Final_Logout.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>25_Final_Logout.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-23T17:33:59.957338" elapsed="0.348477"/>
+</kw>
+<kw name="Log Test Result" owner="common" type="TEARDOWN">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-23T17:34:00.307827" level="INFO">${msg} = PASS: TC_25 Logout Session
+</msg>
+<var>${msg}</var>
+<arg>${TEST STATUS}: ${TEST NAME}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-23T17:34:00.306828" elapsed="0.000999"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:34:00.308825" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:34:00.307827" elapsed="0.000998"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:34:00.306828" elapsed="0.001997"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:32:07.247233" elapsed="113.061592"/>
+</test>
+<kw name="Finalize Execution" owner="common" type="TEARDOWN">
+<kw name="Close Stealth Browser" owner="StealthLib">
+<status status="PASS" start="2026-02-23T17:34:00.311350" elapsed="0.504473"/>
+</kw>
+<kw name="Get Variable Value" owner="BuiltIn">
+<msg time="2026-02-23T17:34:00.816359" level="INFO">${suite_status} = FAIL</msg>
+<var>${suite_status}</var>
+<arg>${SUITE_STATUS}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<status status="PASS" start="2026-02-23T17:34:00.815823" elapsed="0.000536"/>
+</kw>
+<if>
+<branch type="IF" condition="'${suite_status}' == 'PASS'">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${msg}</var>
+<arg>\n============================ All test cases passed =======================\n</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-02-23T17:34:00.817374" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-23T17:34:00.816359" elapsed="0.001015"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-23T17:34:00.818406" level="INFO">${msg} = 
+[ROBOT EXECUTION END] SOME TESTS FAILED
+</msg>
+<var>${msg}</var>
+<arg>\n[ROBOT EXECUTION END] SOME TESTS FAILED\n</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-23T17:34:00.817374" elapsed="0.001032"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:34:00.817374" elapsed="0.001032"/>
+</branch>
+<status status="PASS" start="2026-02-23T17:34:00.816359" elapsed="0.002584"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-23T17:34:00.818943" elapsed="0.001030"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-02-23T17:34:00.822508" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt"&gt;C:\Users\Lenovo\PycharmProjects\Wipro-Training-2026\Capstone Project\Capstone Project\robot framework\reports\robot_terminal_output.txt&lt;/a&gt;'.</msg>
+<arg>${LOG_FILE}</arg>
+<arg>${msg}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-02-23T17:34:00.819973" elapsed="0.003549"/>
+</kw>
+<status status="PASS" start="2026-02-23T17:34:00.311350" elapsed="0.512172"/>
+</kw>
+<doc>Runs 25 Test Cases in a single browser session per CSV file.</doc>
+<status status="FAIL" start="2026-02-23T16:57:48.293258" elapsed="2172.530264"/>
+</suite>
+<statistics>
+<total>
+<stat pass="23" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Shop" id="s1" pass="23" fail="2" skip="0">Shop</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-23T17:14:00.796649" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:16:00.826277" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:18:00.849612" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:20:00.860296" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=60846): Max retries exceeded with url: /session/20790bd69c4ef9ae921dbb951763f552/screenshot (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)"))</msg>
+<msg time="2026-02-23T17:24:02.003114" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:26:02.026602" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:28:02.052075" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)")': /session/20790bd69c4ef9ae921dbb951763f552/screenshot</msg>
+<msg time="2026-02-23T17:30:02.064127" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=60846): Max retries exceeded with url: /session/20790bd69c4ef9ae921dbb951763f552/screenshot (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=60846): Read timed out. (read timeout=120)"))</msg>
+</errors>
+</robot>
